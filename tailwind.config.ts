@@ -52,6 +52,17 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom colors for Filip Nowicki's website
+				'filip-blue': {
+					light: '#E9F0FB',
+					DEFAULT: '#3B82F6',
+					dark: '#1E40AF'
+				},
+				'filip-gray': {
+					light: '#F9FAFB',
+					DEFAULT: '#6B7280', 
+					dark: '#1F2937'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
