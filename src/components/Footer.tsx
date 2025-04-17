@@ -1,5 +1,4 @@
-
-import { Linkedin, Mail, Globe } from "lucide-react";
+import { Linkedin, Mail, Globe, Youtube } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
@@ -40,6 +39,15 @@ const Footer = () => {
               aria-label="Website"
             >
               <Globe size={20} />
+            </a>
+            <a 
+              href="https://www.youtube.com/@FilipNowicki" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-filip-blue hover:bg-filip-blue-dark rounded-full transition-colors"
+              aria-label="YouTube"
+            >
+              <Youtube size={20} />
             </a>
           </div>
         </div>

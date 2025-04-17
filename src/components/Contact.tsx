@@ -1,5 +1,4 @@
-
-import { Mail, Globe, Calendar } from "lucide-react";
+import { Mail, Globe, Calendar, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -56,6 +55,13 @@ const Contact = () => {
               title="Schedule a Meeting"
               content="Book a free strategic session"
               link="https://calendly.com/filip-nowicki/sesjastrategiczna"
+            />
+            
+            <ContactItem 
+              icon={<Youtube size={20} className="text-blue-600" />}
+              title="YouTube"
+              content="Filip Nowicki Channel"
+              link="https://www.youtube.com/@FilipNowicki"
             />
           </div>
           
