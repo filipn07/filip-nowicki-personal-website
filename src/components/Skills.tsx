@@ -1,5 +1,8 @@
 
+import { useLanguage } from "@/contexts/LanguageContext";
+
 const Skills = () => {
+  const { t } = useLanguage();
   const skillCategories = [
     {
       title: "Marketing",
@@ -39,7 +42,7 @@ const Skills = () => {
   return (
     <section id="skills" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Skills</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">{t('skills.title')}</h2>
         
         <div className="grid md:grid-cols-3 gap-8">
           {skillCategories.map((category, categoryIndex) => (

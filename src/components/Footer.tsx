@@ -1,7 +1,9 @@
 
 import { Linkedin, Mail, Globe } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
   
   return (
@@ -10,7 +12,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <h3 className="text-xl font-bold mb-2">Filip Nowicki</h3>
-            <p className="text-gray-300">Empowering experts to reach their clients</p>
+            <p className="text-gray-300">{t('footer.tagline')}</p>
           </div>
           
           <div className="flex space-x-4">
@@ -44,7 +46,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} Filip Nowicki. All rights reserved.
+            © {currentYear} Filip Nowicki. {t('footer.rights')}
           </p>
         </div>
       </div>

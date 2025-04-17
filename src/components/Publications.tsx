@@ -1,5 +1,6 @@
 
 import { Book } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface PublicationProps {
   title: string;
@@ -41,6 +42,7 @@ const PublicationItem = ({ title, publisher, year, link }: PublicationProps) => 
 };
 
 const Publications = () => {
+  const { t } = useLanguage();
   const publications = [
     {
       title: "Niezapracowani. Jak zbudować biznes marzeń i jeździć na wakacje 7 razy w roku.",
@@ -53,7 +55,7 @@ const Publications = () => {
   return (
     <section id="publications" className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Publications</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">{t('publications.title')}</h2>
         <div className="max-w-3xl mx-auto">
           {publications.map((publication, index) => (
             <PublicationItem 

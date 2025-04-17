@@ -1,5 +1,6 @@
 
 import { Briefcase } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface JobProps {
   title: string;
@@ -31,6 +32,7 @@ const JobCard = ({ title, company, period, description }: JobProps) => {
 };
 
 const Experience = () => {
+  const { t } = useLanguage();
   const jobs = [
     {
       title: "Founder",
@@ -83,7 +85,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Work Experience</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">{t('experience.title')}</h2>
         <div className="max-w-3xl mx-auto">
           {jobs.map((job, index) => (
             <JobCard 

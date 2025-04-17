@@ -1,6 +1,7 @@
 
 import { Mail, Globe, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ContactItem = ({ icon, title, content, link }: { icon: React.ReactNode, title: string, content: string, link?: string }) => {
   return (
@@ -28,10 +29,11 @@ const ContactItem = ({ icon, title, content, link }: { icon: React.ReactNode, ti
 };
 
 const Contact = () => {
+  const { t } = useLanguage();
   return (
     <section id="contact" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Contact</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">{t('contact.title')}</h2>
         
         <div className="max-w-3xl mx-auto">
           <div className="bg-white rounded-lg shadow-sm p-8 mb-8">

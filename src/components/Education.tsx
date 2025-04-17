@@ -1,5 +1,6 @@
 
 import { GraduationCap } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface EducationItemProps {
   degree: string;
@@ -48,6 +49,7 @@ const EducationItem = ({ degree, institution, period, institutionUrl, institutio
 };
 
 const Education = () => {
+  const { t } = useLanguage();
   const educationItems = [
     {
       degree: "MBA in Executive MBA",
@@ -68,7 +70,7 @@ const Education = () => {
   return (
     <section id="education" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Education</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">{t('education.title')}</h2>
         <div className="max-w-3xl mx-auto">
           {educationItems.map((item, index) => (
             <EducationItem 

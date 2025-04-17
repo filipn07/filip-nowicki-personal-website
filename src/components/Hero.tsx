@@ -1,8 +1,11 @@
 
 import { Calendar, Mail, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="hero" className="pt-24 pb-12 md:py-32 bg-gradient-to-b from-filip-blue-light to-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -12,22 +15,22 @@ const Hero = () => {
               Filip Nowicki
             </h1>
             <p className="text-xl md:text-2xl text-filip-gray mb-6">
-              Empowering experts to reach their clients through innovative strategies
+              {t('hero.subtitle')}
             </p>
             <p className="text-filip-gray mb-8 max-w-lg">
-              Specializing in LinkedIn, video content, and digital advertising to help coaches, mentors, and consultants expand their reach without traditional client-hunting techniques.
+              {t('hero.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-filip-blue hover:bg-filip-blue-dark text-white px-6" asChild>
                 <a href="https://calendly.com/filip-nowicki/sesjastrategiczna" target="_blank" rel="noopener noreferrer">
                   <Calendar className="mr-2 h-4 w-4" />
-                  Schedule a Free Session
+                  {t('hero.button.schedule')}
                 </a>
               </Button>
               <Button variant="outline" className="border-filip-blue text-filip-blue hover:bg-filip-blue-light" asChild>
                 <a href="#contact">
                   <Mail className="mr-2 h-4 w-4" />
-                  Contact Me
+                  {t('hero.button.contact')}
                 </a>
               </Button>
             </div>
